@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="CircularChart">
+        <attr name="progress" format="integer"/>
+        <attr name="circleRadius" format="dimension" />
+        <attr name="ringSize" format="dimension" />
+        <attr name="ringBackgroundColor" format="color"/>
+        <attr name="progressColor" format="color"/>
+        <attr name="textSize" format="dimension"/>
+        <attr name="isCurve" format="boolean"/>
+        <attr name="startAngle" format="integer"/>
+        <attr name="clockwise" format="boolean"/>
+    </declare-styleable>
+</resources>

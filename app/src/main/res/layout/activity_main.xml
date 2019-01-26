@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".MainActivity"
+        android:gravity="center"
+        xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <com.hm60.circularchart.CircularChart
+            android:id="@+id/chart"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:circleRadius="60dp"
+            android:padding="10dp"
+            app:isCurve="true"
+            app:ringSize="25dp"
+            app:progress="70"
+            app:textSize="30sp"
+            app:startAngle="90"
+            app:clockwise="false"
+            app:ringBackgroundColor="#C2BFBF"
+            app:progressColor="#AD1DAD"
+            android:layout_gravity="center"/>
+
+
+    <Button
+            android:id="@+id/btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="animate"/>
+
+
+</LinearLayout>
