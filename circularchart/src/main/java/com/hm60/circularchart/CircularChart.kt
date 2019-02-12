@@ -5,6 +5,7 @@ import android.content.Context
 import android.graphics.*
 import android.text.TextPaint
 import android.util.AttributeSet
+import android.util.Log
 import android.view.View
 import androidx.annotation.ColorInt
 
@@ -137,6 +138,8 @@ class CircularChart @JvmOverloads constructor(context: Context, attrs: Attribute
         val heightMode = View.MeasureSpec.getMode(heightMeasureSpec)
         val heightSize = View.MeasureSpec.getSize(heightMeasureSpec)
 
+        Log.d("Spec", MeasureSpec.toString(widthMeasureSpec))
+
         var width = 0
         var height = 0
 
@@ -146,7 +149,7 @@ class CircularChart @JvmOverloads constructor(context: Context, attrs: Attribute
                 width = widthSize
             View.MeasureSpec.AT_MOST -> //wrap_content
                 width = 2 * outerCircleRadius.toInt() + paddingLeft + paddingRight
-            View.MeasureSpec.UNSPECIFIED -> //match_parent
+            View.MeasureSpec.UNSPECIFIED -> //if inside scrollView
                 width = widthSize
         }
 
@@ -156,7 +159,7 @@ class CircularChart @JvmOverloads constructor(context: Context, attrs: Attribute
                 height = heightSize
             View.MeasureSpec.AT_MOST -> //wrap_content
                 height = 2 * outerCircleRadius.toInt() + paddingTop + paddingBottom
-            View.MeasureSpec.UNSPECIFIED -> //match_parent
+            View.MeasureSpec.UNSPECIFIED -> //if inside scrollView
                 height = heightSize
         }
 
